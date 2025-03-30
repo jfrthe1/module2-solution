@@ -1,0 +1,59 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Conteneur */
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Sections */
+.section {
+    background-color: #f4f4f4;
+    border: 1px solid black;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Titres */
+.title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: orange;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+/* 📌 Desktop : 3 colonnes */
+@media (min-width: 992px) {
+    .section {
+        width: 32%;
+    }
+}
+
+/* 📌 Tablette : 2 sections en haut, 1 en bas */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 48%;
+    }
+    .section:nth-child(3) {
+        width: 100%;
+    }
+}
+
+/* 📌 Mobile : 1 section par ligne */
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+    }
+}
